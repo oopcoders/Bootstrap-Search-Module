@@ -1,0 +1,39 @@
+.search-box {
+  position: relative;
+}
+.search-result {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+.search-result ul {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.search-result ul li {
+  cursor: pointer;
+}
+
+.search-result ul li:hover {
+  background-color: #eeeeee;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -1,0 +1,33 @@
+<ng-template [ngIf]="searchService.isOptionsEmpty$ | async" [ngIfElse]="show">
+	<p>
+		No Search List Available
+	</p>
+</ng-template>
+
+<ng-template #show>
+	<div class="mt-4 mb-4" *ngIf="searchService.options$ | async as selectedOptions">
+		<header *ngIf="selectedOptions.length > 0">
+			<h3>Search Result list</h3>
+		</header>
+		<div class="card" *ngFor="let item of selectedOptions">
+			<div class="row" *ngIf="selectedOptions.length > 0">
+				<div>
+					<div class=" col-3 p-4">
+						<img src="{{item.imageUrl}}" class="rounded selected-image" alt="Selected Image">
+					</div>
+					<div class="col-9 p-4">
+						<h5>{{item.name}}</h5>
+						<p>{{item.description}}</p>
+						<p>
+							<span>Price: {{item.price}} </span>
+							<span>Quantity: {{item.quantity}} </span>
+
+						</p>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</ng-template>

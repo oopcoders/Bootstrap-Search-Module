@@ -1,0 +1,13 @@
+<div class="search-box">
+	<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+		<input type="search" name="search" ngModel class="form-control form-control-lg" type="text" placeholder="Search"
+			   (keyup)="term$.next($event.target.value)" autocomplete="off" (blur)="onblur()">
+	</form>
+
+	<div class="search-result" *ngIf="windowOpen$|async">
+		<ul class="list-group">
+			<li class="list-group-item" *ngFor="let item of searchResults$ | async" (click)="searchOption(item)">{{item.name}}</li>
+		</ul>
+	</div>
+</div>

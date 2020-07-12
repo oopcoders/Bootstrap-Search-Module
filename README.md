@@ -2,9 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
+## How to set up and run application
+
+1. Clone application from https://github.com/oopcoders/Bootstrap-Search-Module.git
+
+2. Run `npm install`
+
+3. Run `npm run dev`
+
+4. Go to `http://localhost:4200/`
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run dev` runs server and application. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
